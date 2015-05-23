@@ -1,0 +1,20 @@
+Created by Brendon Hollingsworth and Jake Pillai circa 2013
+
+Do you ever find yourself starting blankly at your Steam library scrolling up and down wondering why you keep
+purchasing those Humble Bundles that force an endless stream of games (most you've never heard of) into your life?
+
+Do you sometimes question what it is you are doing with your life?
+
+Do you need a tissue?
+
+If you've answered yes to any of the above questions - this app is for you!
+
+We created this app to add a little spice to our gaming lives by randomly selecting a game from our Steam
+libraries for us to play in the event that we are so bored that we result to playing a random game (one we have
+or have not played before - your choice). Check it out!
+
+Uses Python 3, and the dependencies can be acquired via our requirements.txt file:
+    
+    pip install -r requirements.txt
+
+Happy gaming!

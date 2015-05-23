@@ -13,7 +13,11 @@ def getGBData(game):#need to run this first
     response = requests.get(searchEndpoint, params=query_params)
     searchData = response.json()
 
-    gameEndpoint = searchData['results'][0]['api_detail_url']
+    try:
+        gameEndpoint = searchData['results'][0]['api_detail_url']
+    except IndexError:
+        return(0)
+
 
     game_params={  'api_key': '45d87803202f42bfa349be91e28ac9e1acc1597d',
                 'format': 'json',
@@ -40,6 +44,12 @@ def getGameScore(GBData):#most games on Giant Bomb don't have a score, need to m
 def getMoreInfo(GBData):
     return(GBData['results']['deck'])
 
+def getLink(GBData):
+    try:
+        return(GBData['results']['site_detail_url'])
+    except TypeError:
+        return(0)
+
 #def getGenre(GBData):
     #genredict = ""
     #for x in range(0,2):
@@ -61,5 +71,6 @@ def getMoreInfo(GBData):
 #print(score)
 #print(gameInfo)
 #print(genre)
+
 
 
