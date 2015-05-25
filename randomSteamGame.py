@@ -180,11 +180,11 @@ neverPlayedButton.grid(column=2, row=5, sticky=W)
 
 #get random game button
 getgamebutton = ttk.Button(mainframe, text="Get Game", command=randomGameButtonHandler)
-getgamebutton.grid(column=2, row=6, sticky=W)
+getgamebutton.grid(column=2, row=6, sticky=E)
 
 #open link to Giant Bomb for random game button
 getlinkbutton = ttk.Button(mainframe, text="Open Link", command=getMoreInfoLinkButtonHandler)
-getlinkbutton.grid(column=2, row=6, sticky=E)
+getlinkbutton.grid(column=2, row=6, sticky=W)
 
 for child in mainframe.winfo_children(): child.grid_configure(padx=5, pady=5)
 #give everything inside mainframe a little cushion from one child to the other
