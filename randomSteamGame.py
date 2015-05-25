@@ -173,7 +173,7 @@ ttk.Label(mainframe, text="Random Game: ").grid(column=2, row=4, sticky=W)
 ttk.Label(mainframe, textvariable=outputText).grid(column=2, row=4, sticky=E)
 
 #check box for a never played game
-neverPlayedButton = Checkbutton(mainframe, text="Unplayed", var=neverplayed)
+neverPlayedButton = ttk.Checkbutton(mainframe, text="Unplayed", var=neverplayed)
 neverPlayedButton.grid(column=2, row=5, sticky=W)
 
 #check box for a 'good game'
