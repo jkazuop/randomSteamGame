@@ -27,7 +27,7 @@ def menuAbout():
     messagebox.showinfo(title="About GameGetter", message="Creators: Brendon Hollingsworth and Jacob Pillai \n\nVersion: 1.0 \n\nContact Us: asahibeeru@gmail.com ")
 
 #Button functions:
-def randomGameButtonHandler():
+def randomGameButtonHandler(*args):
     userName = steamID.get()
     neverPlayed = neverplayed.get()
     getGame(userName, neverPlayed)
@@ -173,7 +173,7 @@ ttk.Label(mainframe, text="Random Game: ").grid(column=2, row=4, sticky=W)
 ttk.Label(mainframe, textvariable=outputText).grid(column=2, row=4, sticky=E)
 
 #check box for a never played game
-neverPlayedButton = Checkbutton(mainframe, text="Never Played", var=neverplayed)
+neverPlayedButton = Checkbutton(mainframe, text="Unplayed", var=neverplayed)
 neverPlayedButton.grid(column=2, row=5, sticky=W)
 
 #check box for a 'good game'
